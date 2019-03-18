@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html
+  <head>
+    <style>
+      body{
+        background-image: url('backgroundtile.jpg');
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+      }
+      
+      header {
+        background-color: #FFFFFF;
+        padding: 25%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin: auto;
+        width: 75%;
+      }
+      
+      main {
+        background-color: #FFFFFF;
+        padding: 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin: auto;
+        width: 20px;
+      }
+      
+      h1 {
+        color: green;
+        text-align: center;
+      }
+      
+      form {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: auto;
+        width: 50% ;
+      }
+      
+      #submit {
+        background-color: green;
+        color: #FFFFFF;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      
+      #submit:hover {
+        background-color: #FFFFFF;
+        color: green;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 2px solid green;
+      }
+      
+      .row {
+        display: grid;
+        grid-template-columns: 200px 200px;
+      }
+      
+      .favorite-animal{
+        float: left;
+      }
+      
+      .favorite-hobbies {
+        float: right;
+      }
+      
+      #survey-form {
+        
+      }
+      
+    </style>
+    <title>
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Survey Form</h1>
+    </header>
+    <main>
+      <p id="description"></p>
+      <form action="#" id="survey-form">
+        <p> <label id="name-label">Name:  </label><input type="text" id="name" required placeholder="I.P. Freely"/></p>
+        <p><label id="email-label">Email Address:  </label><input type="email" required id="email" placeholder="iggyp@freely.com"/></p>
+        <p><label id="number-label">Enter a number between 0 and 25:  </label><input type="number" id="number" min="0" max="25" placeholder="10" /></p>
+        <p><label id="dropdown-label">Pick a cat:  </label><select name="cats" id="dropdown">
+          <option value="Binx">Binx</option>
+          <option value="Sally">Sally</option>
+          <option value="O'Malley">O'Malley</option>
+          <option value="Jilly Bean">Jilly Bean</option>
+          </select></p>
+       <div class="row">
+        <div class="favorite-animal"><label for="favorite-animal">Favorite Animal: </label><br /><label for="favorite-animal">
+        <input type="radio" id="snake" name="favorite-animal" >Snake</label><br />
+<label for="favorite-animal">
+  <input type="radio" id="cat" name="favorite-animal" >Cat</label><br />
+<label for="favorite-animal">
+  <input type="radio" id="rabbit" name="favorite-animal">Rabbit</label><br />
+<label for="favorite-animal">
+  <input type="radio" id="dog" name="favorite-animal">Dog</label><br />
+<label for="favorite-animal">
+  <input type="radio" id="hamster" name="favorite-animal">Hamster</label></div>
+        <div class="favorite-hobbies"><label for="Favorite Hobbies">Favorite Hobbies: </label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="knitting">Knitting</label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="knitting">Reading</label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="running">Running</label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="coding">Coding</label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="theater">Theater</label><br />
+          <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="drawing">Drawing</label></div>
+        </div>
+        <p><label for="additional-comments">Additional Comments: </label><br /><textarea name="additional-comments" rows="30" cols="50">Enter your additional comments here!</textarea></p>
+        <p><input type="submit" id="submit"></p>
+      </form>
+    </main>
+  </body>
+</html>
