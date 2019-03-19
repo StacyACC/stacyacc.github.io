@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+           
+      body {
+        font-family: Verdana, Geneva, sans-serif;
+      }
+      
+      header {
+        background-color: #FFFFFF;
+        width: 95%;
+        height: 25%;
+        position: fixed;
+        top: 0;
+      }
+      
+      #header-img {
+        height: auto;
+        min-height: 50px;
+        width: 40%;
+      }
+      
+      nav {
+        background-color: #171232;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+      nav a {
+        color: #FFFFFF;
+        font-size: 24px;
+        text-decoration: none;
+      }
+      
+      nav #product-photo {
+        display: flex;
+      }
+      
+      nav #product-description {
+         display: flex;
+      }
+      
+      nav #product-video {
+          display: flex;
+      }
+      
+      #item-title {
+        padding: 25px;
+        font-size: 36px;
+        font-weight: bold;
+      }
+      
+      main {
+        width: 95%;
+      }
+      
+      main img {
+        width: 95%;
+        min-width: 200px;
+        border-radius: 10px;
+        margin: auto;
+      }
+      
+      form {
+        padding: 10px;
+      }
+      
+      @media (max-width: 50px) {
+        body {
+          font-size: 12px;
+        }
+      }
+       
+      
+    </style>
+    <title>
+    </title>
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="dundermifflin.jpg" />
+      <nav id="nav-bar">
+        <div><a href="#photo" id="product-photo" class="nav-link">Photos</a></div>
+        <div> <a href="#description" id="product-description" class="nav-link">Description</a></div>
+        <div> <a href="#video" id="product-video" class="nav-link">Video</a></div>
+      </nav>
+    </header>
+    <main>
+      <div id="item-title">The Watermelon Stroller</div>
+      <div id="photo">
+        <a name="#photo"><img src="watermelonstroller.jpg" alt="The Watermelon Stroller is pictured in three states: closed dome with handle stowed, open dome with handle stowed, and closed dome with handle extended. The watermelon passenger appears unbothered." /></a>
+      </div>
+      <div id="description"></div>
+      <a name="description"><p>Are you tired of having to carry a watermelon? While it can provide a convenient excuse for showing up to a party of people you hardly know, watermelons are heavy, and you may arrive at the party out of breath and dissheveled from the exertion of carrying it.</p></a>
+      <p>But fret no more! The Watermelon Stroller is the answer to your wildest watermelon transport needs. Simple nestle your precious cargo into the refrigerated compartment, gently close the dome over it to protect from wayward knees, extend the convenient handle, and you and your watermelon can arrive safely to your destination, graceful and unbothered.</p>
+      <div>
+        <a name="video"><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1VyaXkK0I7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+      </div>
+      <div>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <label for="email"> Enter your email for product updates!</label> <input type="email" id="email" name="email" placeholder="your@email.com"><input type="submit" id="submit">
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
