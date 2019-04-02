@@ -6,7 +6,7 @@
         background-image: url('backgroundtile.jpg');
         font-family: "Trebuchet MS", Helvetica, sans-serif;
       }
-      
+
       header {
         background-color: #FFFFFF;
         padding: 10px;
@@ -14,8 +14,14 @@
         border-top-right-radius: 5px;
         margin: auto;
         width: 80%;
+        border-top-style: solid;
+        border-left-style: solid;
+        border-right-style: solid;
+        border-bottom-style: none;
+        border-color: black;
+        border-width: 1px;
       }
-      
+
       main {
         background-color: #FFFFFF;
         padding: 10px;
@@ -23,26 +29,37 @@
         border-bottom-right-radius: 5px;
         margin: auto;
         width: 80%;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
       }
-      
+
       h1 {
         color: green;
         text-align: center;
       }
-      
+
       form {
         padding-left: 10px;
         padding-right: 10px;
+        width: 70%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
       }
-      
+
       #submit {
         background-color: green;
         color: #FFFFFF;
         padding: 10px;
         border-radius: 5px;
         font-size: 14px;
+        align-self: flex-end;
       }
-      
+
       #submit:hover {
         background-color: #FFFFFF;
         color: green;
@@ -50,22 +67,38 @@
         border-radius: 5px;
         font-size: 14px;
         border: 2px solid green;
+        align-self: flex-end;
       }
-      
+
+      .labels{
+        font-size: 18px;
+        font-weight: 600;
+      }
+
       .row {
         display: grid;
         grid-template-columns: 200px 200px;
       }
-      
+
       .favorite-animal{
         float: left;
       }
-      
+
       .favorite-hobbies {
         float: right;
       }
-  
-      
+
+      .col-75{
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+      }
+
+      .bottom-align{
+        align-self: flex-end;
+      }
+
+
     </style>
     <title>
       Survey Form Project
@@ -78,17 +111,17 @@
     <main>
       <p id="description"></p>
       <form action="#" id="survey-form">
-        <p> <label id="name-label">Name:  </label><input type="text" id="name" required placeholder="I.P. Freely"/></p>
-        <p><label id="email-label">Email Address:  </label><input type="email" required id="email" placeholder="iggyp@freely.com"/></p>
-        <p><label id="number-label">Enter a number between 0 and 25:  </label><input type="number" id="number" min="0" max="25" placeholder="10" /></p>
-        <p><label id="dropdown-label">Pick a cat:  </label><select name="cats" id="dropdown">
+        <p> <label id="name-label" class="labels">Name:  </label><input type="text" id="name" required placeholder="I.P. Freely"/></p>
+        <p><label id="email-label" class="labels">Email Address:  </label><input type="email" required id="email" placeholder="iggyp@freely.com"/></p>
+        <p><label id="number-label" class="labels">Enter a number between 0 and 25:  </label><input type="number" id="number" min="0" max="25" placeholder="10" /></p>
+        <p><label id="dropdown-label" class="labels">Pick a cat:  </label><select name="cats" id="dropdown">
           <option value="Binx">Binx</option>
           <option value="Sally">Sally</option>
           <option value="O'Malley">O'Malley</option>
           <option value="Jilly Bean">Jilly Bean</option>
           </select></p>
        <div class="row">
-        <div class="favorite-animal"><label for="favorite-animal">Favorite Animal: </label><br /><label for="favorite-animal">
+        <div class="favorite-animal"><label for="favorite-animal" class="labels">Favorite Animal: </label><br /><label for="favorite-animal">
         <input type="radio" id="snake" name="favorite-animal" >Snake</label><br />
 <label for="favorite-animal">
   <input type="radio" id="cat" name="favorite-animal" >Cat</label><br />
@@ -98,7 +131,7 @@
   <input type="radio" id="dog" name="favorite-animal">Dog</label><br />
 <label for="favorite-animal">
   <input type="radio" id="hamster" name="favorite-animal">Hamster</label></div>
-        <div class="favorite-hobbies"><label for="Favorite Hobbies">Favorite Hobbies: </label><br />
+        <div class="favorite-hobbies"><label for="Favorite Hobbies" class="labels">Favorite Hobbies: </label><br />
           <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="knitting">Knitting</label><br />
           <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="knitting">Reading</label><br />
           <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="running">Running</label><br />
@@ -106,8 +139,9 @@
           <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="theater">Theater</label><br />
           <label for="favorite-hobbies"><input type="checkbox" name="favorite-hobbies" value="drawing">Drawing</label></div>
         </div>
-        <p><label for="additional-comments">Additional Comments: </label><br /><textarea name="additional-comments" rows="30" cols="50">Enter your additional comments here!</textarea></p>
-        <p><input type="submit" id="submit"></p>
+        <div class="col-75">
+        <p><label for="additional-comments" class="labels">Additional Comments: </label><br /><textarea name="additional-comments" style="height:200px; width:100%">Enter your additional comments here!</textarea></p></div>
+        <div class="bottom-align"><p><input type="submit" id="submit"></p></div>
       </form>
     </main>
   </body>
