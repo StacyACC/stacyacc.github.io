@@ -21,22 +21,13 @@
         width: 100vw;
         z-index: 1;
       }
-      
+
       .nav-links{
         color: black;
         text-decoration: none;
         font-size: 24px;
       }
-      
-      .projects {
-        
-      }
-      
-      .project-title{
-        
-      }
-      
-      
+
       #navbar{
         position: fixed;
         display: flex;
@@ -49,7 +40,7 @@
         background-color: #daecf0;
         z-index: 2;
       }
-      
+
       #welcome-section{
         background-color: #daecf0;
         height: 100vh;
@@ -58,7 +49,7 @@
         z-index: 0;
         color: black;
       }
-        
+
       #welcome{
         margin-top: 33vh;
         width: 60%;
@@ -66,13 +57,105 @@
         margin: auto;
         z-index: 1;
       }
-      
+
       #projects {
-        
+        margin-top: 15vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        height: 100vh;
+        width: 90%;
+        margin: auto;
       }
-      
-      
-      
+
+      #contact {
+        background-color: #f0e1da;
+        height: 55vh;
+        width: 100vw;
+        left: 0px;
+        color: black;
+        padding-top: 15vh;
+      }
+
+      #contact-links{
+        height: 80%;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        margin: auto;
+      }
+
+      .project-div{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+      }
+
+      .project-image{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+      }
+
+      .project-image:hover{
+        border-style: solid;
+        border-color: #98cbd6;
+        border-width: 1px;
+      }
+
+      .project-div a{
+        text-decoration: none;
+        align-self: center;
+        color: #666f70;
+      }
+
+      .project-div a:hover{
+        text-decoration: none;
+        color: #98cbd6;
+      }
+
+      .contact-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+      }
+
+      .contact-links{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+      }
+
+      .contact-image:hover{
+        border-style: solid;
+        border-color: white;
+        border-width: 1px;
+      }
+
+      .contact-links a{
+        text-decoration: none;
+        align-self: center;
+        color: #666f70;
+      }
+
+      .contact-links a:hover{
+        text-decoration: none;
+        color: white;
+      }
+
     </style>
     <title>My Portfolio Page
     </title>
@@ -80,7 +163,7 @@
   <body>
     <header>
        <nav id="navbar">
-        <a class="nav-links" href="#bio">biography</a>
+        <a class="nav-links" href="#welcome">biography</a>
         <a class="nav-links" href="#projects">projects</a>
         <a class="nav-links" href="#contact">contact</a></nav>
     </header>
@@ -90,15 +173,32 @@
         <p>Welcome to my portfolio page! This page will showcase some of my coding projects. Scroll down to view some of my work.</p></div>
     </section>
     <section id="projects">
-      <div class="projects">
-        <h3 class="project-title">Tribute Project</h3>
-        <a href="https://stacyacc.github.io/shakuntaladevi.html" target="_blank">Tribute Project</a>
+      <div class="project-div">
+        <a href="https://stacyacc.github.io/shakuntaladevi.html" target="_blank"><img src="tribute.png" class="project-image" />
+        <h3 class="project-title">Tribute Project</h3></a>
       </div>
+      <div class="project-div">
+        <a href="https://stacyacc.github.io/surveyform.html" target="_blank"><img src="survey.png" class="project-image" />
+        <h3 class="project-title">Survey Form Project</h3></a>
+      </div>
+      <div class="project-div">
+        <a href="https://stacyacc.github.io/watermelonstroller.html" target="_blank"><img src="product.png" class="project-image" />
+        <h3 class="project-title">Product Page</h3></a>
+      </div>
+      <div class="project-div">
+        <a href="https://staccacc.github.io/resume.html" target="_blank"><img src="resume.png" class="project-image" />
+          <h3 class="project-title">Resume</h3></a>
+        </div>
       </section>
       <section id="contact">
-        <div class="contact-link"><a href="https://github.com/StacyACC" target="_blank">Github</a></div>
+        <div id="contact-links">
+        <div class="contact-links"><a href="https://github.com/StacyACC" target="_blank"><img src="github.png" class="contact-image" />
+          <h3 class="contact-title">Github</h3></a></div>
+        <div class="contact-links"><a href="https://www.linkedin.com/in/technicallystacy/" target="_blank"><img src="linkedin.png" class="contact-image" />
+          <h3 class="contact-title">LinkedIn</h3></a></div>
+        <div class="contact-links"><a href="mailto:technically.stacy@gmail.com"><img src="email.png" class="contact-image" />
+        <h3 class="contact-title">Email</h3></a></div>
+      </div>
       </section>
-      
-      
   </body>
 </html>
